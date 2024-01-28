@@ -14,7 +14,7 @@ const Dropdown = () => {
   };
 
   const logout = () => {
-    sessionStorage.clear()
+    localStorage.clear()
     showSuccessNotification(
       "You're logged out successfully",
       "The page will be refreshed",
@@ -29,7 +29,7 @@ const Dropdown = () => {
     <div className="dropdown-container">
       <div className="dropdown-header" onClick={toggleDropdown}>
         <div className="dropdown-header-title">
-          <span>{`${sessionStorage.getItem("usersName") != null ? sessionStorage.getItem("usersName") : ""} ${sessionStorage.getItem("usersLastName") != null && window.innerWidth > 810 ? sessionStorage.getItem("usersLastName") : ""}`}</span>
+          <span>{`${localStorage.getItem("usersName") != null ? localStorage.getItem("usersName") : ""} ${localStorage.getItem("usersLastName") != null && window.innerWidth > 810 ? localStorage.getItem("usersLastName") : ""}`}</span>
         </div>
         <span className={`dropdown-header-icon ${isOpen ? "open" : ""}`}></span>
       </div>

@@ -33,19 +33,19 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post(Variables.API_URL + "user/login", {
+      const response = await axios.post(Variables.API_URL + "api/user/login", {
         userName: userName,
         password: password,
       });
 
       if (response.status === 200) {
         const token = response.data.token;
-        sessionStorage.setItem("jwtToken", token);
+        localStorage.setItem("jwtToken", token);
         navigate("/");
         var userInfo = await getUserInfo();
-        sessionStorage.setItem("usersName", userInfo.firstName)
-        sessionStorage.setItem("usersLastName", userInfo.lastName)
-        sessionStorage.setItem("usersEmail", userInfo.email)
+        localStorage.setItem("usersName", userInfo.firstName)
+        localStorage.setItem("usersLastName", userInfo.lastName)
+        localStorage.setItem("usersEmail", userInfo.email)
         showSuccessNotification(
           "You're logged in successfully",
           "Happy buy!",
@@ -64,7 +64,7 @@ const Login = () => {
     try {
       const userInfo = await axios.get(Variables.API_URL + "user/UserInfo", {
         headers: {
-          Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`,
+          Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
       })
       return userInfo.data;

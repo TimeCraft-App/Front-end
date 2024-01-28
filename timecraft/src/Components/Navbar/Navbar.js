@@ -21,7 +21,7 @@ const Navbar = () => {
   const [productsInCart, setProductsInCart] = useState(0);
 
   useEffect(() => {
-    const jwtToken = sessionStorage.getItem("jwtToken");
+    const jwtToken = localStorage.getItem("jwtToken");
     if (jwtToken) {
       setToken(jwtToken);
       axios
@@ -43,7 +43,7 @@ const Navbar = () => {
   }, [productsInCart]);
 
   const numberOfProductsInCart = async () => {
-    if (!sessionStorage.getItem("jwtToken")){
+    if (!localStorage.getItem("jwtToken")){
       return;
     }
 
@@ -52,7 +52,7 @@ const Navbar = () => {
         Variables.API_URL + "ShoppingCart/NumberOfProducts", 
         {
           headers: {
-            Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`,
+            Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
           },
         }
       );

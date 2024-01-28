@@ -20,9 +20,9 @@ const Register = () => {
   const handleRegister = async (event) => {
     event.preventDefault();
 
-    const firstNameRegex = /^[A-Z][a-z]{2,30}$/;
-    const lastNameRegex = /^[A-Z][a-z]{2,30}$/;
-    const emailRegex = /^[A-Za-z0-9]+@[a-zA-Z-]+\.(com|net|edu)$/;
+    const firstNameRegex = /^[A-Za-z]{2,30}$/;
+    const lastNameRegex = /^[A-Za-z]{2,30}$/;
+    const emailRegex = /^[A-Za-z0-9\.]+@[a-zA-Z-]+\.(com|net|edu)$/;
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[.!?@#$%&]).{6,20}$/;
 
     const errors = [];
@@ -47,15 +47,15 @@ const Register = () => {
       alert(password)
       errors.push("Please provide a password with 6+ characters, including upper, lowercase, and special characters!");
     }
-    if (errors.length > 0 ){
+    if (errors.length > 0) {
       document.querySelector("p.error").innerHTML = errors[0];
       return;
-    }else {
+    } else {
       document.querySelector("p.error").innerHTML = "";
     }
 
     try {
-      const response = await axios.post(Variables.API_URL + "user/register", {
+      const response = await axios.post(Variables.API_URL + "api/user/register", {
         firstName: firstName,
         lastName: lastName,
         birthday: birthDate,
@@ -66,35 +66,29 @@ const Register = () => {
       });
       if (response.status === 200) {
         const token = response.data.token;
-        sessionStorage.setItem("jwtToken", token);
+        localStorage.setItem("jwtToken", token);
         navigate("/");
         var userInfo = await getUserInfo();
-        sessionStorage.setItem("usersName", userInfo.firstName);
-        sessionStorage.setItem("usersLastName", userInfo.lastName);
-        sessionStorage.setItem("usersEmail", userInfo.email);
+        localStorage.setItem("usersName", userInfo.firstName);
+        localStorage.setItem("usersLastName", userInfo.lastName);
+        localStorage.setItem("usersEmail", userInfo.email);
         showSuccessNotification("You're registered successfully", "", 2000)
       }
     } catch (error) {
-      var response = error.response.data;
-      response.errors.forEach(error => {
-        showWarningNotification(error, "", 2000)
-      });
+      showWarningNotification(error.response.data.errors[0], "", 2000)
     }
   };
 
   const getUserInfo = async () => {
     try {
-      const userInfo = await axios.get(Variables.API_URL + "user/UserInfo", {
+      const userInfo = await axios.get(Variables.API_URL + "api/user/UserInfo", {
         headers: {
-          Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`,
+          Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
       });
       return userInfo.data;
     } catch (error) {
-      var response = error.response.data;
-      response.errors.foreach(error => {
-        showErrorNotification(error, "", 2000)
-      })
+      showWarningNotification(error.response.data.errors[0], "", 2000)
     }
   };
 
