@@ -3,8 +3,7 @@ import axios from "axios";
 import "./Login.css";
 import { Variables } from "../../Variables";
 import { useNavigate } from "react-router-dom";
-import SimpleNavbar from "../Admin/DbEntities/Navbar/SimpleNavbar";
-import { showSuccessNotification, showErrorNotification, showWarningNotification } from "../../NotificationUtils";
+import { showSuccessNotification, showWarningNotification } from "../../Utils/NotificationUtils"
 
 
 const Login = () => {
@@ -78,8 +77,7 @@ const Login = () => {
   }
   return (
     <div className="login__container">
-      <SimpleNavbar />
-      <h1 className="website">SmartSupplies</h1>
+      <h1 className="website">TimeCraft</h1>
       <div className="login__page">
         <div className="login">
           <img src={require("./assets/login.jpg")} alt="login" />

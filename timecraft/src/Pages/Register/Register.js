@@ -3,8 +3,7 @@ import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { Variables } from "../../Variables";
 import axios from "axios";
-import SimpleNavbar from "../Admin/DbEntities/Navbar/SimpleNavbar";
-import { showSuccessNotification, showErrorNotification, showWarningNotification } from "../../NotificationUtils";
+import { showSuccessNotification, showErrorNotification, showWarningNotification } from "../../Utils/NotificationUtils"
 
 
 const Register = () => {
@@ -101,8 +100,7 @@ const Register = () => {
 
   return (
     <div className="register__container">
-      <SimpleNavbar />
-      <h1 className="website">SmartSupplies</h1>
+      <h1 className="website">TimeCraft</h1>
       <div className="register__page">
         <div className="register">
           <img src={require("./assets/login.jpg")} alt="login" />
