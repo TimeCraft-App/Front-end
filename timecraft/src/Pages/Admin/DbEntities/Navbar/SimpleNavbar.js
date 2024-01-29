@@ -13,8 +13,8 @@ const SimpleNavbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/shopall" className={({ isActive }) => (isActive ? "active" : "")}>
-              Shop All
+            <NavLink to="/timeoffrequest" className={({ isActive }) => (isActive ? "active" : "")}>
+              Timeoff Request
             </NavLink>
           </li>
           <li>

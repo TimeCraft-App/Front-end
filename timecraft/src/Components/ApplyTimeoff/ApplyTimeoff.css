@@ -1,0 +1,55 @@
+.apply-timeoff {
+    width: 270px;
+    height: 270px;
+    border-radius: 25px;
+    background-color: white;
+    margin: 20px;   
+    padding: 12px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px rgba(110, 110, 110, 0.2);
+}
+
+.apply-timeoff:hover {
+    scale: 1.03;
+    transition: scale 0.2s ease-in-out;
+}
+
+.apply-timeoff h3 {
+    margin: 0;
+    margin-top: 20px; 
+}
+
+.apply-timeoff ul {
+    list-style-type: none;
+    padding-right: 40px;
+}
+
+.apply-timeoff ul li {
+    font-size: 20px;
+    font-weight: 100;
+    background-color: #bbb;
+    padding: 2px 4px;
+    width: 130px;
+    border-radius: 10px;
+    margin: 4px;
+}
+.apply-timeoff .apply-btn {
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    background-color:  rgb(200, 230, 255);
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+
+}
+.apply-timeoff:hover {
+   background-color: rgb(200, 230, 255);
+}
+
+.apply-timeoff .apply-btn:hover {
+    cursor: pointer;
+    background-color: lightblue;
+ }

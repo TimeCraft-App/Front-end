@@ -20,7 +20,7 @@ const DbEntities = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/shopall">Shop All</NavLink>
+            <NavLink to="/timeoffrequest">Timeoff Request</NavLink>
           </li>
           <li>
             <NavLink to="/contact">Contact</NavLink>
@@ -89,10 +89,10 @@ const DbEntities = () => {
             <NavLink to="/admin/dbentities/reviews">View Reviews</NavLink>
           </div>
           <div className="card">
-            <h4>WishListItems</h4>
+            <h4>TimeoffBalanceItems</h4>
             <p>Dashboard for Wish List Items</p>
-            <NavLink to="/admin/dbentities/wishListItem">
-              View WishListItems
+            <NavLink to="/admin/dbentities/TimeoffBalanceItem">
+              View TimeoffBalanceItems
             </NavLink>
           </div>
         </div>

@@ -45,10 +45,10 @@ const Dropdown = () => {
           </li>
           <li className="dropdown-item" onClick={handleItemClick}>
             <NavLink
-              to="/wishlist"
+              to="/TimeoffBalance"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <span >Wishlist</span>
+              <span >TimeoffBalance</span>
             </NavLink>
           </li>
           <li className="dropdown-item" onClick={handleItemClick}>

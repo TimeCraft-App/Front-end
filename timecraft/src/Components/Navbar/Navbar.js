@@ -66,7 +66,7 @@ const Navbar = () => {
   };
   const handleSearchSubmit = async (event) => {
     event.preventDefault();
-    navigate(`/shopall?searchTerm=${encodeURIComponent(searchTerm)}`);
+    navigate(`/timeoffrequest?searchTerm=${encodeURIComponent(searchTerm)}`);
   };
   
   return (
@@ -152,15 +152,6 @@ const Navbar = () => {
               }
             >
               <NavLink to="/">Home</NavLink>
-            </li>
-            <li
-              className={
-                isMobileMenuToggled
-                  ? " small__screen "
-                  : " hide__on__small__screen"
-              }
-            >
-              <NavLink to="/shopall">Shop All</NavLink>
             </li>
             <li
               className={

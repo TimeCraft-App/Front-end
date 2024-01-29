@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
         </h2>
         <ul>
           <a href="/"><li>Home</li></a>
-          <a href="/shopall"><li>Shop All</li></a>
+          <a href="/timeoffrequest"><li>Timeoff Requests</li></a>
           <a href="/ourstory"><li>Our Story</li></a>
           <a href="/contact"><li>Contact</li></a>
         </ul>
@@ -39,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="powered__by">
-        ©2023 by Albion, Blendion, Jeton. All rights reserved!
+        ©2024 by Albion, Blendion, Jeton. All rights reserved!
       </p>
     </footer>
   );

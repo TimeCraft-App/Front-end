@@ -13,6 +13,8 @@ import Categories from "./Pages/Admin/DbEntities/Categories/Categories";
 import AddCategory from "./Pages/Admin/DbEntities/Categories/AddCategory";
 import EditCategory from "./Pages/Admin/DbEntities/Categories/EditCategory";
 import Analytics from "./Pages/Admin/Analytics/Analytics";
+import Contact from "./Pages/Contact/Contact";
+import OurStory from "./Pages/OurStory/OurStory";
 
 import Dashboards from "./Pages/Admin/Dashboards/Dashboards";
 import DbEntities from "./Pages/Admin/DbEntities/DbEntities";
@@ -49,7 +51,8 @@ function App() {
             <Route path="/admin/dbentities/editcategory/:id" element={<EditCategory />} />
             <Route path="/admin/dashboards" element={<Dashboards />} exact />
             <Route path="/admin/users" element={<Users />} exact />
-
+            <Route path="/ourstory" element={<OurStory />} exact />
+            <Route path="/contact" element={<Contact />} exact />
           </Routes>
         </Router>
       </AppContext.Provider>
