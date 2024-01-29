@@ -1,0 +1,139 @@
+.entity__container * {
+  box-sizing: border-box;
+}
+
+.entity__container {
+  font-family: "Open Sans", sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.entity__container .add {
+  width: 240px;
+  height: 40px;
+  background-color: #ffc515;
+  margin: 10px 0;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-top: 7px;
+}
+
+.entity__container .add a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.entity__container .row__image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.entity__container h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.entity__container form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.entity__container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.entity__container th,
+.entity__container td {
+  text-align: left;
+  padding: 12px 15px;
+}
+
+.entity__container th {
+  background-color: black;
+  color: #ffc515;
+  font-weight: 600;
+}
+
+
+.entity__container tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.entity__container tr:nth-child(even):hover {
+  background-color: #ddd;
+}
+
+.entity__container tr:nth-child(odd):hover {
+  background-color: #eee;
+}
+
+.entity__container .btn {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.entity__container .change {
+  min-width: 180px;
+}
+
+.entity__container .delete__button {
+  color: #f55555;
+  background-color: #fff;
+  border: 1px solid #f55555;
+  cursor: pointer;
+}
+
+.entity__container .delete__button:hover {
+  color: #fff;
+  background-color: #f55050;
+}
+
+.entity__container .edit__button {
+  width: 55px;
+  height: 27px;
+  color: #3384aa;
+  background-color: #fff;
+  border: 1px solid #3384aa;
+}
+
+.entity__container .edit__button:hover {
+  color: #fff;
+  background-color: #3c84ab;
+}
+
+.entity__container .load__more {
+  width: 180px;
+  height: 35px;
+  border: 2px solid black;
+  color: black;
+  background-color: #ffc515;
+  cursor: pointer;
+  margin: 30px 0;
+  box-shadow: 0 0 3px;
+  font-weight: 700;
+  display: block;
+  margin: 15px auto;
+}
+
+.entity__container .load__more:hover {
+  background-color: orange;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.entity__container .reached__final__page {
+  text-align: center;
+}

@@ -25,7 +25,7 @@ const Navbar = () => {
     if (jwtToken) {
       setToken(jwtToken);
       axios
-        .get(Variables.API_URL + "user/UserRole", {
+        .get(Variables.API_URL + "api/user/UserRole", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },
