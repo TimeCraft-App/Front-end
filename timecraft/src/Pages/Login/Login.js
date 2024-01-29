@@ -48,7 +48,7 @@ const Login = () => {
         localStorage.setItem("usersEmail", userInfo.email)
         showSuccessNotification(
           "You're logged in successfully",
-          "Happy buy!",
+          "Happy TimeoffRequest!",
           2000
         );
       }
@@ -62,7 +62,7 @@ const Login = () => {
 
   const getUserInfo = async () => {
     try {
-      const userInfo = await axios.get(Variables.API_URL + "user/UserInfo", {
+      const userInfo = await axios.get(Variables.API_URL + "api/user/UserInfo", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
         },
