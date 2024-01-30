@@ -25,7 +25,7 @@ const RecentTimeoffRequests = () => {
 
     }
     return (
-        <div className='recent__orders'>
+        <div className='recent__timeoffRequests'>
             <table >
                 <thead>
                     <tr>

@@ -1,16 +1,16 @@
 import React from 'react'
-import "./UpcomingTimeOff.css"
+import "./Timeoffs.css"
 
-const UpcomingTimeOff = () => {
+const Timeoffs = () => {
     return (
         <div className='upcoming-timeoff'>
             <h3>
                 Upcoming Timeoff
             </h3>
-            <img src={require("./assets/beach.jpg")} alt="" />
+            <img src={require("./Assets/beach.jpg")} alt="" className='image'/>
             <button type='button' className='view-my-time'>View my time</button>
         </div>
     )
 }
 
-export default UpcomingTimeOff
+export default Timeoffs

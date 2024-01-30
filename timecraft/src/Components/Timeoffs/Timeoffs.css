@@ -11,7 +11,7 @@
     box-shadow: 2px 2px rgba(110, 110, 110, 0.2);
 }
 
-.upcoming-timeoff img {
+.upcoming-timeoff .image {
     max-width: 200px;
     max-height: 120px;
     padding: 10px;

@@ -77,7 +77,7 @@ const SideNav = () => {
         </li>
         <li>
           <NavLink
-            to="/admin/orders"
+            to="/admin/timeoffRequests"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             <AttachMoneyIcon sx={{ fontSize: "29px" }} />

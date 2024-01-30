@@ -7,7 +7,7 @@ import "./Analytics.css"
 const Analytics = () => {
   const [sales, setSales] = useState(0);
   const [newCustomers, setNewCustomers] = useState(0);
-  const [orders, setTimeoffRequests] = useState(0);
+  const [timeoffRequests, setTimeoffRequests] = useState(0);
   const [newProducts, setNewProducts] = useState(0);
   useEffect(() => {
     getTotalSales();
@@ -77,18 +77,18 @@ const Analytics = () => {
     stat: sales + "€",
     date: "Last year",
   };
-  let customersStat = {
+  let employeesStat = {
     icon: "bar_chart",
-    mainText: "New customers",
+    mainText: "New employees",
     percentage: Math.round(newCustomers / 500 * 100),
     stat: newCustomers,
     date: "Last year",
   };
-  let ordersStat = {
+  let timeoffRequestsStat = {
     icon: "thumb_up",
-    mainText: "Number of orders",
-    percentage: Math.round(orders / 500 * 100),
-    stat: orders,
+    mainText: "Number of timeoffRequests",
+    percentage: Math.round(timeoffRequests / 500 * 100),
+    stat: timeoffRequests,
     date: "Last year",
   };
 
@@ -108,8 +108,8 @@ const Analytics = () => {
         <p class='date'>Last 365 days</p>
         <div className="cards">
           <StatisticCard props={salesStat} />
-          <StatisticCard props={customersStat} />
-          <StatisticCard props={ordersStat} />
+          <StatisticCard props={employeesStat} />
+          <StatisticCard props={timeoffRequestsStat} />
           <StatisticCard props={productsStat} />
         </div>
       </div>

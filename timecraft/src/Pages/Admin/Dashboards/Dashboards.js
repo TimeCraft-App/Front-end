@@ -12,7 +12,7 @@ import SimpleAnalytics from "../Components/SimpleAnalytics/SimpleAnalytics";
 const Dashboards = () => {
   const [sales, setSales] = useState(0);
   const [newCustomers, setNewCustomers] = useState(0);
-  const [orders, setTimeoffRequests] = useState(0);
+  const [timeoffRequests, setTimeoffRequests] = useState(0);
   useEffect(() => {
     getTotalSales();
     numberOfNewCustomers();
@@ -76,18 +76,18 @@ const Dashboards = () => {
     stat: sales + "€",
     date: "Last 7 days",
   };
-  let customersStat = {
+  let employeesStat = {
     icon: "bar_chart",
-    mainText: "New customers",
+    mainText: "New employees",
     percentage: Math.round(newCustomers/20 * 100),
     stat: newCustomers,
     date: "Last 7 days",
   };
-  let ordersStat = {
+  let timeoffRequestsStat = {
     icon: "thumb_up",
-    mainText: "Number of orders",
-    percentage: Math.round(orders/20 * 100),
-    stat: orders,
+    mainText: "Number of timeoffRequests",
+    percentage: Math.round(timeoffRequests/20 * 100),
+    stat: timeoffRequests,
     date: "Last 7 days",
   };
   
@@ -98,13 +98,13 @@ const Dashboards = () => {
         <h1 className="title">Dashboard</h1>
         <div className="cards">
           <StatisticCard props={salesStat} />
-          <StatisticCard props={customersStat} />
-          <StatisticCard props={ordersStat} />
+          <StatisticCard props={employeesStat} />
+          <StatisticCard props={timeoffRequestsStat} />
         </div>
         <div className="hide__md">
-          <p className="recent__orders__title">Recent orders</p>
+          <p className="recent__timeoffRequests__title">Recent timeoffRequests</p>
           <RecentTimeoffRequests />
-          <StyledNavLink to="/admin/orders">Show All</StyledNavLink>
+          <StyledNavLink to="/admin/timeoffRequests">Show All</StyledNavLink>
         </div>
       </div>
       <div>

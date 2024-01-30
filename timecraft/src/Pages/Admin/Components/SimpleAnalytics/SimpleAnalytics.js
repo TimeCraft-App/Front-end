@@ -12,9 +12,9 @@ const SimpleAnalytics = () => {
     const [yesterdayProducts, setYesterdayProducts] = useState(0.0);
     const [yesterdayCustomers, setYesterdayCustomers] = useState(0.0);
 
-    const [ordersPercentage, setTimeoffRequestsPercentage] = useState(0.0);
+    const [timeoffRequestsPercentage, setTimeoffRequestsPercentage] = useState(0.0);
     const [productsPercentage, setProductsPercentage] = useState(0.0);
-    const [customersPercentage, setCustomersPercentage] = useState(0.0);
+    const [employeesPercentage, setCustomersPercentage] = useState(0.0);
 
     useEffect(() => {
         getYesterdayCustomers()
@@ -119,7 +119,7 @@ const SimpleAnalytics = () => {
     }
     return (
         <div className='simple__analytics'>
-            <div className='orders analytic' title='Show More'>
+            <div className='timeoffRequests analytic' title='Show More'>
                 <div className='order__logo__container'>
                     <span className="material-symbols-outlined">
                         shopping_cart
@@ -129,7 +129,7 @@ const SimpleAnalytics = () => {
                     <p>TIMEOFF_REQUESTS MADE</p>
                     <h5>Last 24 hours</h5>
                 </div>
-                <p style={{ color: ordersPercentage < 0 ? "darkred" : "green" }} className='percentage'>{ordersPercentage}%</p>
+                <p style={{ color: timeoffRequestsPercentage < 0 ? "darkred" : "green" }} className='percentage'>{timeoffRequestsPercentage}%</p>
                 <p className='total'>{yesterdayTimeoffRequests}</p>
             </div>
             <div className='new__products analytic' title='Show More'>
@@ -145,17 +145,17 @@ const SimpleAnalytics = () => {
                 <p style={{ color: productsPercentage < 0 ? "darkred" : "green" }} className='percentage'>{productsPercentage}%</p>
                 <p className='total'>{yesterdayProducts}</p>
             </div>
-            <div className='new__customers analytic' title='Show More'>
-                <div className='customers__logo__container'>
+            <div className='new__employees analytic' title='Show More'>
+                <div className='employees__logo__container'>
                     <span className="material-symbols-outlined">
                         person_add
                     </span>
                 </div>
                 <div className='description'>
-                    <p>NEW CUSTOMERS</p>
+                    <p>NEW EMPLOYEE</p>
                     <h5>Last 24 hours</h5>
                 </div>
-                <p style={{ color: customersPercentage < 0 ? "darkred" : "green" }} className='percentage'>{customersPercentage}%</p>
+                <p style={{ color: employeesPercentage < 0 ? "darkred" : "green" }} className='percentage'>{employeesPercentage}%</p>
                 <p className='total'>{yesterdayCustomers}</p>
             </div>
         </div>

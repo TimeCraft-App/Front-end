@@ -18,7 +18,6 @@ const Navbar = () => {
   const [token, setToken] = useState("");
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [productsInCart, setProductsInCart] = useState(0);
 
   useEffect(() => {
     const jwtToken = localStorage.getItem("jwtToken");
@@ -39,31 +38,9 @@ const Navbar = () => {
           console.error(error);
         });
     }
-    numberOfProductsInCart();
-  }, [productsInCart]);
+  }, []);
 
-  const numberOfProductsInCart = async () => {
-    if (!localStorage.getItem("jwtToken")){
-      return;
-    }
 
-    try {
-      const response = await axios.get(
-        Variables.API_URL + "ShoppingCart/NumberOfProducts", 
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
-          },
-        }
-      );
-      const numberOfProducts = response.data;
-      if (numberOfProducts > 0) {
-        setProductsInCart(numberOfProducts);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
   const handleSearchSubmit = async (event) => {
     event.preventDefault();
     navigate(`/timeoffrequest?searchTerm=${encodeURIComponent(searchTerm)}`);
