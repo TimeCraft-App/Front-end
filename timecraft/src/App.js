@@ -9,6 +9,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Reports from "./Pages/Admin/Reports/Reports";
 import Settings from "./Pages/Admin/Settings/Settings"; // Admin settings
+import Employee from "./Pages/Admin/Employee/Employee";
 import Categories from "./Pages/Admin/DbEntities/Categories/Categories";
 import AddCategory from "./Pages/Admin/DbEntities/Categories/AddCategory";
 import EditCategory from "./Pages/Admin/DbEntities/Categories/EditCategory";
@@ -43,6 +44,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Oops />} />
             <Route path="/admin/settings" element={<Settings />} exact />
+            <Route path="/admin/employee" element={<Employee />} exact />
             <Route path="/admin/reports/" element={<Reports />} exact />
             <Route path="/admin/analytics" element={<Analytics />} exact />
             <Route path="/admin/dbentities" element={<DbEntities />} exact />

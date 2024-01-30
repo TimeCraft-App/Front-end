@@ -40,60 +40,21 @@ const DbEntities = () => {
           </div>
 
           <div className="card">
-            <h4>Apartamenti57646</h4>
-            <p>Dashboard for types of apartamenti57646s</p>
-            <NavLink to="/admin/dbentities/apartamenti57646s">View Categories</NavLink>
+            <h4>Employee</h4>
+            <p>Dashboard for Employees of TimeCraft</p>
+            <NavLink to="/admin/employee">View Employees</NavLink>
           </div>
+
           <div className="card">
-            <h4>Ndertesa57646</h4>
-            <p>Dashboard for types of ndertesa57646</p>
-            <NavLink to="/admin/dbentities/ndertesa57646s">View Categories</NavLink>
+            <h4>-</h4>
+            <p>Dashboard for ??</p>
+            <NavLink to="/admin/dbentities/Employee">View ??</NavLink>
           </div>
+
           <div className="card">
-            <h4>Categories</h4>
-            <p>Dashboard for types of categories</p>
-            <NavLink to="/admin/dbentities/categories">View Categories</NavLink>
-          </div>
-          <div className="card">
-            <h4>CartItems</h4>
-            <p>Dashboard for Cart Items</p>
-            <NavLink to="/admin/dbentities/cartitem">View CartItems</NavLink>
-          </div>
-          <div className="card">
-            <h4>TimeoffRequestDetails</h4>
-            <p>Dashboard for details of timeoffRequests</p>
-            <NavLink to="/admin/dbentities/orderdetails">
-              View TimeoffRequestDetails
-            </NavLink>
-          </div>
-          <div className="card">
-            <h4>Products</h4>
-            <p>Dashboard for Products</p>
-            <NavLink to="/admin/dbentities/products">View Products</NavLink>
-          </div>
-          <div className="card">
-            <h4>ProductTimeoffRequestDetails</h4>
-            <p>Dashboard for Product TimeoffRequest Details</p>
-            <NavLink to="/admin/dbentities/productorderdetails">
-              View ProductTimeoffRequestDetails
-            </NavLink>
-          </div>
-          <div className="card">
-            <h4>Promotions</h4>
-            <p>Dashboard for Promotions</p>
-            <NavLink to="/admin/dbentities/promotion">View Promotions</NavLink>
-          </div>
-          <div className="card">
-            <h4>Reviews</h4>
-            <p>Dashboard for Reviews</p>
-            <NavLink to="/admin/dbentities/reviews">View Reviews</NavLink>
-          </div>
-          <div className="card">
-            <h4>TimeoffBalanceItems</h4>
-            <p>Dashboard for Wish List Items</p>
-            <NavLink to="/admin/dbentities/TimeoffBalanceItem">
-              View TimeoffBalanceItems
-            </NavLink>
+            <h4>-</h4>
+            <p>Dashboard for ??</p>
+            <NavLink to="/admin/dbentities/Employee">View ??</NavLink>
           </div>
         </div>
       </div>
